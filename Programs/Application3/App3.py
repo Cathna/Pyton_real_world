@@ -22,5 +22,17 @@ while True:
                 else:
                     file.write(redirect+" "+ website+"\n")
     else:
+        with open(hosts_temp,'r+') as file:
+            content=file.readlines()#takes you to end of text in file
+            file.seek(0)# takes you to begining of file
+            for line in content:#parses file and then adds lines
+                if not any(website in line for website in website_list):
+                    file.write(line)
+            file.truncate()# truncates file removing any duplicated text after the added lines       
         print("Fun hours...")
     time.sleep(5)
+
+#Scheduling a python script
+#change file to .pyw, this will aloow the script to run in hte background using pythonw.exe
+#for this file to run using the ystem host file, it must be run at admin level
+#For windows to run the scrip, open task scheduler, create task, and set all criteria
