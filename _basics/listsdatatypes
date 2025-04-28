@@ -1,0 +1,16 @@
+monday_temps = (1, 4 ,5)
+
+print(monday_temps)
+
+monday_temperatures = [9.1, 8.8, 7.5, 6.5, 9.9]
+
+monday_temperatures.append(8.1)
+
+print(monday_temperatures)
+
+#monday_temperatures.clear() clears the list
+#monday_temperatures.index(8.8) gives you the index number
+#monday_temperatures[1] will give the value at that index
+#len(monday_temperatures) gives the length of the list
+#monday_temperatures[1:4] gives a slice of the list from index 1 to 3
+#other options [0:3] [:3] [3:5] [3:] those with missing numbers will go from the start or end of the list
